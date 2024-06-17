@@ -1,0 +1,123 @@
+<section class="h-100 h-custom" style="background-color: #e5d13b6b;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="/assets/register.png"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body pb-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+            <form class="px-md-2">
+                <div class="row pb-2">
+                    <div class="col-12 text-center">
+                        <div class="btn-group">
+                        <button type="button" (click)="isJobSeeker =true" class="btn" [ngClass]="isJobSeeker?'btn-success':'btn-primary'">Are you a job seeker</button>
+                        <button type="button" (click)="isJobSeeker =false" class="btn" [ngClass]="!isJobSeeker?'btn-success':'btn-primary'">Register As An Employer</button>
+                        </div>                
+                    </div>
+                </div>
+            </form>
+              <div *ngIf = "isJobSeeker">
+                <form>
+                 <div class="row">
+                    <div class="col-sm">
+                        <label for="FullName" class="form-label">FullName</label>
+                        <input type="text" id="FullName" [(ngModel)]="JobSeekerObj.FullName" name="FullName" class="form-control" >
+                    </div>                  
+                      
+                      <div class="col-sm">
+                          <label for="mobile" class="form-label">Mobile</label>
+                          <input type="text" class="form-control" [(ngModel)]="JobSeekerObj.MobileNo" name="MobileNo"  id="mobile">
+                      </div>
+                      <div class="col-sm">
+                        <select name="ExperienceStatus"class="form-control" [(ngModel)]="JobSeekerObj.ExperienceStatus" >
+                          <option value="" selected disabled>Select Experience </option>
+                          <option value="Fresher">Fresher</option>
+                          <option value="Experienced">Experienced</option>
+                        </select>                         
+                      </div>
+                  </div>
+                <div class="col-sm">
+                    <div class="col-sm">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" [(ngModel)]="JobSeekerObj.EmailId" name="EmailId" id="email">
+                    </div>
+                </div>
+                 
+                  <div class="row">
+                      <div class="col-sm">
+                          <label for="ResumeUrl" class="form-label">ResumeUrl</label>
+                          <input type="text" class="form-control" [(ngModel)]="JobSeekerObj.ResumeUrl" name="ResumeUrl"  id="ResumeUrl">
+                      </div>                     
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                      <button type="submit" (click)="registerAsJobSeeker()" class="btn btn-primary">Register</button>
+                  </div>
+                </form>
+
+              </div>
+              <div *ngIf="!isJobSeeker">
+                <form>
+                  <div class="mb-3">
+                      <label for="companyName" class="form-label">Company Name</label>
+                      <input type="text" id="companyName" [(ngModel)]="employerObj.CompanyName" name="CompanyName" class="form-control" >
+                  </div>
+                  <div class="row">
+                      <div class="col-sm">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" [(ngModel)]="employerObj.EmailId" name="EmailId" id="email">
+                      </div>
+                      <div class="col-sm">
+                          <label for="mobile" class="form-label">Mobile</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.MobileNo" name="MobileNo"  id="mobile">
+                      </div>
+                      <div class="col-sm">
+                          <label for="phone" class="form-label">Phone</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.PhoneNo" name="PhoneNo"  id="phone">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm">
+                          <label for="logoUrl" class="form-label">Company Logo URL</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.LogoURL" name="LogoURL"  id="logoUrl">
+                      </div>
+                      <div class="col-sm">
+                          <label for="gst" class="form-label">GST No</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.GstNo" name="GstNo"  id="gst">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm">
+                          <label for="city" class="form-label">City</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.City" name="City"  id="city">
+                      </div>
+                      <div class="col-sm">
+                          <label for="state" class="form-label">State</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.State" name="State"  id="state">
+                      </div>
+                      <div class="col-sm">
+                          <label for="pincode" class="form-label">Pin-Code</label>
+                          <input type="text" class="form-control" [(ngModel)]="employerObj.PinCode" name="pincode"  id="pincode">
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <textarea class="form-control" [(ngModel)]="employerObj.Address" name="Address"  id="address"></textarea>
+                  </div>
+                  <div class="mb-3">
+                      <button type="submit" (click)="register()" class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
