@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
     "UserName": "",
     "Password": ""
   }
+  
+  constructor(private jobSrv:JobService) { }
+
   onLogin(){
     this.jobSrv.login(this.loginObj).subscribe((res:any)=>{
       if (res.result){
@@ -23,7 +26,7 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  constructor(private jobSrv:JobService) { }
+ 
 
   ngOnInit() {
   }
