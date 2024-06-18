@@ -22,9 +22,25 @@
 
           </ul>
           <form class="d-flex">
-              <button routerLink="/login" class="btn btn-outline-primary round-button mx-2" type="button">Login</button>              
-              <button routerLink="/register" class="btn btn-success round-button" type="button">Register</button>
+              <button  routerLink="/login" class="btn btn-outline-primary round-button mx-2" type="button">Login</button>              
+              <button  routerLink="/register" class="btn btn-success round-button" type="button">Register</button>
+           
+             
           </form>
+
+        <!-- 等后续把login 做好后替换
+            <form class="d-flex">
+            <button *ngIf="isLoggedIn" routerLink="/login" class="btn btn-outline-primary round-button mx-2" type="button">Login</button>              
+            <button *ngIf="isLoggedIn" routerLink="/register" class="btn btn-success round-button" type="button">Register</button>
+            <button *ngIf="isLoggedIn"  class="btn btn-link" type="button">{{userInfo.userName}}</button>
+            
+            <button *ngIf="isLoggedIn" (click)="logoff()" class="btn btn-success round-button" type="button">LogOff</button>
+           
+        </form>
+        
+        -->
+      
+       
       </div>
   </div>
 </nav>
