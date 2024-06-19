@@ -1,3 +1,36 @@
-<p>
-  create-new-job works!
-</p>
+<div>
+  <form>
+    <div class="mb-3">
+        <label for="companyName" class="form-label">Company Name</label>
+        <input type="text"  [(ngModel)]="jobObj.JobName" name="JobName" class="form-control" >
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="jobObj.CategoryId" name="CategoryId" >
+        </div>
+        <div class="col-sm">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="text" class="form-control" [(ngModel)]="jobObj.Experience" name="Experience"  >
+        </div>
+        <div class="col-sm">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" [(ngModel)]="jobObj.Package" name="Package"  >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+          <label for="logoUrl" class="form-label">Company Logo URL</label>
+          <input type="text" class="form-control" [(ngModel)]="jobObj.Location" name="Location"  >            
+        </div>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" [(ngModel)]="jobObj.JobDescription" name="JobDescription" ></textarea>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>

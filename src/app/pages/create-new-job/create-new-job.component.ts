@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNewJobComponent implements OnInit {
 
+  jobObj:any={
+    "JobId": 0,
+    "JobName": "",
+    "CreatedDate":new Date(),
+    "EmployerId": 0,
+    "CategoryId": 0,
+    "Experience": "",
+    "Package": "",
+    "Location": "",
+    "JobDescription": "",
+    "IsActive": true
+  }
   constructor() { }
 
   ngOnInit() {
