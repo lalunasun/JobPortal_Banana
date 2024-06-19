@@ -7,6 +7,7 @@ import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { JobListingComponent } from './pages/job-listing/job-listing.component';
 import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
+import { CreateNewJobComponent } from './pages/create-new-job/create-new-job.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:'my-jobs',
     component:MyJobsComponent
+  },
+  {
+    path:'new-job',
+    component:CreateNewJobComponent
   },
   {
     path:'**',
