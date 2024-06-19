@@ -16,8 +16,9 @@
               <li class="nav-item">
                   <a class="nav-link" href="#">Companies</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
+              <!--未实现 <li class="nav-item" *ngIf="userInfo.userRole=='Employer'"> -->
+              <li class="nav-item" >
+                  <a class="nav-link" routerLink="/new-job">Create New Job</a>  
               </li>
 
           </ul>
